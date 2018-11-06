@@ -39,6 +39,6 @@ public class Pointage {
 
 	@Override
 	public String toString() {
-		return "Joueur A: " + joueurA + ", Joueur B: " + joueurB;
+		return "Joueur A: " + joueurA + " -  Joueur B: " + joueurB;
 	}
 }
