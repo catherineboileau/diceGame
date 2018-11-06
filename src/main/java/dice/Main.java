@@ -2,7 +2,7 @@ package dice;
 
 import java.util.Random;
 
-import dice.joueur.Joueur;
+import dice.joueur.*;
 import dice.partie.*;
 
 public class Main {
@@ -11,10 +11,11 @@ public class Main {
 
 		final int POINTS_GAGNANTS = 5;
 
-		Random random = new Random(System.currentTimeMillis());
 		Pointage pointage = new Pointage();
-		Joueur joueurA = new Joueur(random);
-		Joueur joueurB = new Joueur(random);
+		Random random = new Random(System.currentTimeMillis());
+		De de = new De(random);
+		Joueur joueurA = new Joueur(de);
+		Joueur joueurB = new Joueur(de);
 		Partie partie = new Partie(pointage, joueurA, joueurB);
 
 		while (!pointage.hasGagnant(POINTS_GAGNANTS)) {
